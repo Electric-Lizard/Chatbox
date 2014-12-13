@@ -14,7 +14,7 @@ class Register {
 		} else {
 			$ch = curl_init("http://www.google.com/recaptcha/api/verify");
 			$options = array(
-				"privatekey" => "6LcqNP8SAAAAAH7fTTlkmSvuuoUcp62TgkKl_GbL",
+				"privatekey" => "foo",
 				"remoteip" => $_SERVER["REMOTE_ADDR"],
 				"challenge" => $_POST["recaptcha_challenge_field"],
 				"response" => $_POST["recaptcha_response_field"]
