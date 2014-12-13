@@ -1,0 +1,231 @@
+body {
+	margin: 0 auto;
+	color: #333;
+	font-family: Verdana;
+}
+footer, header {
+	background: #444;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18pt;
+	text-align: center;
+	padding: 10px 0;
+	margin-top: 2px;
+}
+header {
+	font-size: 32pt;
+	margin: 0;
+}
+header a, footer a{
+	color: #eee;
+	text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+.pm-menu{
+	text-align: center;
+	margin: 10px 70px 5px;
+}
+.chat-page{
+	margin: auto 70px;
+	margin-top: 5px;
+	min-height: 40em;
+}
+.down-arrow{
+	display:inline-block;
+	float: left;
+	width: 60px;
+	height: auto;
+}
+.login-form{
+	position: relative;
+	margin: auto;
+	display: inline-block;
+	display: none;
+	float: right;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background: #444;
+	color: #eee;
+	padding: 3px 5px;
+	text-align: right;
+}
+.register-anchor{
+	cursor: pointer;
+	font-style: italic;
+	text-decoration: underline;
+}
+#register-area{
+	display: none;
+}
+.reply-form{
+	margin-bottom: 2px;
+}
+.additional-post-info input{
+	margin: 0 2px 2px 0;
+}
+.additional-post-info {
+	margin-right: 5px;
+}
+.main-smiles img {
+	cursor: pointer;
+}
+.BB-codes img {
+	cursor: pointer;
+	max-width: 25px;
+	max-height: 25px;
+}
+.post-button{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none; 
+	display: inline-block;
+	border: 1px ridge #444;
+	padding: 0 5px 0 5px;
+	position: relative;
+	bottom: -1px;
+	font-family: Verdana;
+	font-size: 0.93em;
+	background: #ddd;
+	cursor: pointer;
+}
+.user-panel{
+	float:right;
+	margin: 0 -5px 0 10px;
+}
+.additional-menu-button{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none; 
+	width: 100%;
+	background: #444;
+	color: #eee;
+	cursor: pointer;
+	border-radius: 1px;
+	font-weight: bold;
+	text-align: center;
+}
+.additional-menu{
+	border: 1px ridge #999;
+	display: none;
+	text-align: center;
+	
+}
+.additional-menu span{
+	margin: 2px 20px;
+}
+.content-input, .message{
+	width: 100%;
+	display: block;
+	resize: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.post, .post-like{
+	padding: 4px 7px 7px 7px;
+	border: 1px ridge #DBDBDB;
+	margin-top: 2px;
+	word-break: break-all;
+	font: 12pt verdana;
+}
+.post:hover{
+	background: #eee;
+}
+.post-info{
+	margin-bottom: 3px;
+	font-size: 8pt;
+	align-content: space-between;
+}
+.post-right-align{
+	float:right;
+	text-align: right;
+}
+.post-hash-name{
+	margin-right: 50px;
+}
+.post-id{
+}
+.post-delete a{
+	color: #333;
+}
+.post-ip{
+	margin-right: 20px;
+}
+.post-time{
+	margin-right: 50px;
+}
+.post-title{
+	margin-left: 4em;
+	text-align: center;
+	color: #aaa;
+	font-style: italic;
+}
+.post-info span, .hide-post{
+	vertical-align: top;
+}
+.hide-drop-down-menu{
+	display: inline-block;
+	cursor: pointer;
+}
+.additional-drop-down-menu{
+	display: none;
+	position: absolute;
+	background: #ddd;
+	border: 1px ridge #444;
+	margin-left: -9em;
+	padding: 5px;
+}
+.post-content{
+	white-space: pre-wrap;
+	max-height: 330px;
+	overflow: auto;
+}
+.post-content img{
+	max-height: 300px;
+	max-width: 1000px;
+}
+.post-content .quote{
+	color: #0a0;
+}
+.post-content a{
+	color: #000;
+}
+.post-content .spoiler{
+}
+.post-content .spoiler-head{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none; 
+	padding: 0 5px;
+	border: 1px ridge #444;
+	background: #ddd;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 10pt;
+}
+.post-content .spoiler-content{
+	display: none;
+	border: 1px ridge #ddd;
+	padding: 2px 7px;
+	margin-top: 5px;
+	min-height: 1pt;
+}
+.guest-username{
+	color: #aaa;
+}
+.logged-username{
+	border: 0;
+}
+.authorised {
+	font-weight: bold;
+}
+.post-username {
+	cursor: pointer;
+}
+.post-username a{
+	color: #000;
+}
+.post-content b {
+	font-size: 11pt;
+}
