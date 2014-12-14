@@ -2,9 +2,9 @@
 class Database {
 	public function __construct() {
 		$host = $this->host = "mysql.hostinger.ru";
-		$dbname = $this->dbname = "u195952101_db";
-		$username = $this->username = "u195952101_u";
-		$password = $this->password = "Ae1d7Ml201";
+		$dbname = $this->dbname = "foo";
+		$username = $this->username = "bar";
+		$password = $this->password = "baz";
 		try{
 		$this->db = new PDO ("mysql:host={$this->host};dbname={$this->dbname}", $this->username, $this->password);
 		$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
