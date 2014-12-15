@@ -1,3 +1,3 @@
 Chatbox
 =======
-[Demo page](https://github.com/Electric-Lizard/Chatbox)
+[Demo page](http://electric-lizard.bl.ee/chatbox/)
