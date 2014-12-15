@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- License Agreement at http://iconmonstr.com/license/ -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="strikethrough-icon" d="M381.992,302.768c6.145,12.698,9.699,27.458,9.699,44.889c0,118.779-153.67,136.982-259.623,91.32
+	v-75.965h37.613c3.9,31.044,28.9,47.074,73.006,47.074c42.973,0,77.928-17.546,81.623-55.884
+	c2.184-22.686-8.373-38.589-25.578-51.435H381.992z M293.264,232.767c-53.623-24.009-107.182-40.995-96.797-91.244
+	c10.719-51.872,123.115-61.468,133.248,0.458h37.221V65.294c-134.914-40.135-238.627,1.134-238.627,95.501
+	c0,32.605,14.799,54.938,36.268,71.972H50v40h412v-40H293.264z"/>
+</svg>
