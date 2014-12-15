@@ -308,7 +308,7 @@ var getOlderPosts = setInterval(function() {
 			dataType: "html",
 			success: function(html) {
 				$(".waiting").remove();
-				$(".all-posts").append(html);
+				if ($(html).filter(".post").length) $(".all-posts").append(html);
 				isGettingNewPosts = false;
 			},
 			error: function() {
