@@ -70,10 +70,15 @@ footer a:hover {
 .main-smiles img {
 	cursor: pointer;
 }
+.BB-codes .group {
+	margin: 0 10px;
+}
 .BB-codes img {
 	cursor: pointer;
 	max-width: 25px;
 	max-height: 25px;
+	border: 1px solid #aaa;
+	margin-top: 5px;
 }
 .post-button{
 	-moz-user-select: none;
@@ -225,7 +230,4 @@ footer a:hover {
 }
 .post-username a{
 	color: #000;
-}
-.post-content b {
-	font-size: 11pt;
 }

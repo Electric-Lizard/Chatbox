@@ -23,7 +23,6 @@
 				<input value="<?php echo $_SESSION['username']; ?>" type="text" name="username" class="username-input logged-username" readonly>
 			<?php endif; ?>
 			<input type="text" name="title" class="title-input" placeholder="Subject">
-			<input type="email" name="email" class = "email-input" placeholder="Email" />
 			<input accesskey="s" type="submit" value="Send message" class="post-button post-submit">
 			<?php if ($_SESSION["loginStatus"] !== "passed"): ?>
 				<button type="button" class="post-button user-panel login-button">Login</button>
@@ -69,10 +68,53 @@
 		<?php endforeach; ?>
 	</span>
 	<span class="BB-codes">
-		<img src="/chatbox/temps/includes/img.png" title="image" alt="img" id="img-button">
-		<img src="/chatbox/temps/includes/url.png" title="url" alt="url" id="url-button">
-		<img src="/chatbox/temps/includes/quote.png" title="quote" alt="> " id="quote-button">
-		<img src="/chatbox/temps/includes/spoiler.png" title="spoiler" alt="spoiler" id="spoiler-button">
+		<span class="selects">
+			<select id="font">
+				<option value="" selected>Font</option>
+				<option value="Arial">Arial</option>
+				<option value="Verdana">Verdana</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Comic Sans MS">Comic Sans MS</option>
+			</select>
+			<select id="color">
+				<option value="" selected>Color</option>
+				<option value="black">Black</option>
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="green">Green</option>
+				<option value="yellow">Yellow</option>
+			</select>
+			<select id="size">
+				<option value="" selected>Size</option>
+				<option value="8pt">8pt</option>
+				<option value="10pt">10pt</option>
+				<option value="12pt">12pt</option>
+				<option value="14pt">14pt</option>
+				<option value="18pt">18pt</option>
+				<option value="24pt">24pt</option>
+				<option value="36pt">36pt</option>
+				<option value="54pt">54pt</option>
+				<option value="72pt">72pt</option>
+			</select>
+		</span>
+		<br>
+		<span class="group">
+			<img src="/chatbox/temps/includes/b.svg" class="format-button" title="Bold" alt="b" id="b-button">
+			<img src="/chatbox/temps/includes/i.svg" class="format-button" title="Italic" alt="i" id="i-button">
+			<img src="/chatbox/temps/includes/u.svg" class="format-button" title="Underline" alt="u" id="u-button">
+			<img src="/chatbox/temps/includes/s.svg" class="format-button" title="Strikethrough" alt="s" id="s-button">
+		</span>
+		<span class="group">
+			<img src="/chatbox/temps/includes/left.svg" class="format-button" title="Left" alt="left" id="left-button">
+			<img src="/chatbox/temps/includes/center.svg" class="format-button" title="Center" alt="center" id="center-button">
+			<img src="/chatbox/temps/includes/right.svg" class="format-button" title="Right" alt="right" id="right-button">
+		</span>
+		<span class="group">
+			<img src="/chatbox/temps/includes/img.svg" class="format-button" title="image" alt="img" id="img-button">
+			<img src="/chatbox/temps/includes/url.svg" class="format-button" title="url" alt="url" id="url-button">
+			<img src="/chatbox/temps/includes/spoiler.svg" class="format-button" title="spoiler" alt="spoiler" id="spoiler-button">
+		</span>
 	</span>
 </div>
 
@@ -82,7 +124,7 @@
 	<?php $post = $this->processIndex($post); ?>
 	<div class="post">
 		<div class="post-info">
-			<span class="post-username<?php echo ($this->guestStatus ? ' guest-username' : '') ?><?php echo ($post['isAuthorised'])? ' authorised': '' ?>"><?php echo (!empty($post['email']) ? "<a href=mailto:{$post['email']}>".$post['username']."</a>" : $post['username']); ?></span>
+			<span class="post-username<?php echo ($this->guestStatus ? ' guest-username' : '') ?><?php echo ($post['isAuthorised'])? ' authorised': '' ?>"><?php echo $post['username']; ?></span>
 			<span class="post-title"><?php echo $post['title']; ?></span>
 			<span class="post-right-align">
 				<?php if ($this->isAdmin): ?>

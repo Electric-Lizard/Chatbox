@@ -17,22 +17,34 @@ $("#quote-button").click(function(){
 	document.getElementById("message").setSelectionRange(end+$(this).attr("alt").length, end+$(this).attr("alt").length - (end-start));
 });
 
-function insertBBCode() {
-	var codeName = $(this).attr("alt");
-	var start = document.getElementById("message").selectionStart;
-	var end = document.getElementById("message").selectionEnd;
-	var value = $("#message").val();
-	$("#message").val(value.substring(0, start) + "[" + codeName + "]" + value.substring(start, end) + "[/" + codeName + "]" + value.substring(end));
-	$("#message").focus();
-	if (start == end) {
-		document.getElementById("message").setSelectionRange(start+2+codeName.length, start+2+codeName.length);
-	} else {
-		document.getElementById("message").setSelectionRange(start, end+5+codeName.length*2);
+$(".BB-codes").click(function(event) {
+	if (event.target.className == "format-button") {
+		var codeName = $(event.target).attr("alt");
+		var start = document.getElementById("message").selectionStart;
+		var end = document.getElementById("message").selectionEnd;
+		var value = $("#message").val();
+		$("#message").val(value.substring(0, start) + "[" + codeName + "]" + value.substring(start, end) + "[/" + codeName + "]" + value.substring(end));
+		$("#message").focus();
+		if (start == end) {
+			document.getElementById("message").setSelectionRange(start+2+codeName.length, start+2+codeName.length);
+		} else {
+			document.getElementById("message").setSelectionRange(start, end+5+codeName.length*2);
+		}
+	} else if (event.target.tagName == "OPTION" && event.target.value.length) {
+		var codeName = $(event.target).parent().attr("id");
+		var attrValue = $(event.target).attr("value");
+		var start = document.getElementById("message").selectionStart;
+		var end = document.getElementById("message").selectionEnd;
+		var value = $("#message").val();
+		$("#message").val(value.substring(0, start) + "[" + codeName + "=" + attrValue + "]" + value.substring(start, end) + "[/" + codeName + "]" + value.substring(end));
+		$("#message").focus();
+		if (start == end) {
+			document.getElementById("message").setSelectionRange(start+3+codeName.length+attrValue.length, start+3+codeName.length+attrValue.length);
+		} else {
+			document.getElementById("message").setSelectionRange(start, end+6+attrValue.length+codeName.length*2);
+		}
 	}
-}
-$("#img-button").click(insertBBCode);
-$("#url-button").click(insertBBCode);
-$("#spoiler-button").click(insertBBCode);
+});
 
 $(".login-button").click(function() {
 	$(".login-form").slideToggle("fast");
@@ -47,8 +59,12 @@ function getLastPostId() {
 	$(".post .post-id").each(function() {
   	allPostId.push($(this).html());
 	});
-	var lastPostId = Math.max.apply(Math, allPostId);
-	return lastPostId;
+	if (!allPostId) {
+		return 0;
+	} else {
+		var lastPostId = Math.max.apply(Math, allPostId);
+		return lastPostId;
+	}
 }
 lastPostId = getLastPostId();
 var isRefreshing = false;

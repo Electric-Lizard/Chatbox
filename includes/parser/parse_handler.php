@@ -85,7 +85,7 @@ class ParseHandler {
 					$url = "http://".$content;
 				} else $url = $content;
 			}
-			$html = "<a target=\"_blank\" href=\"$url\">{$content}<a>";
+			$html = "<a target=\"_blank\" href=\"$url\">{$content}</a>";
 			break;
 			case 'img':
 			$content = htmlspecialchars($content);

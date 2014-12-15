@@ -87,10 +87,10 @@ class Posts extends ProcessPost{
 		setcookie('rememberedName', $_POST['username'], time()+30*60*60*24);
 		isset($_POST['password']) ? $cryptPass = crypt($_POST['password']) : $cryptPass = null;
 		isset($_POST['content']) ? $content = $_POST['content'] : $content = null;
-		isset($_POST['email']) ? $email = $_POST['email'] : $email = null;
+		$email = null;
 		isset($_SERVER['REMOTE_ADDR']) ? $clientIP = $_SERVER['REMOTE_ADDR'] : $ip = null;
 		isset($_POST['title']) ? $title = $_POST['title'] : $title = null;
-		$postTime = date("Y-m-d H:i:s", time() + 5*60*60);
+		$postTime = date("Y-m-d H:i:s", time());
 		isset($_COOKIE['hash-name']) ? $hashName = $_COOKIE['hash-name'] : $hashName = null;
 		($_SESSION["loginStatus"] == "passed")? $isAuthorised = true : $isAuthorised = false;
 		try{
